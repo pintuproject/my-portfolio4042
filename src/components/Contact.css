@@ -1,0 +1,9 @@
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.space-y-6{
+    height:500px;
+    width:200px
+}
