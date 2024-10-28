@@ -1,4 +1,3 @@
-import React from 'react'
 
 const About = () => {
   return (
@@ -24,7 +23,7 @@ const About = () => {
                 I specialize in transforming designs into seamless web experiences. With a strong foundation in HTML, CSS, and JavaScript, I build interactive user interfaces using modern frameworks like React.js.
                 </p> */}
                 <p>
-                I am a passionate Front-End Developer with 1 year of experience in building responsive and user-friendly web applications. Skilled in HTML, CSS, JavaScript, and React.js, I focus on creating intuitive interfaces and seamless user experiences. I have a keen eye for design and a strong understanding of modern web development practices. With a background in both software development and teaching, I enjoy collaborating with teams and continuously learning to enhance my skills. I'm currently seeking opportunities to contribute to dynamic projects and grow as a developer.
+                I am a passionate Full Stack Developer with 1 year of experience in building responsive and user-friendly web applications. Skilled in  React.js,Express.js,Node.js and MongoDB, I focus on creating intuitive interfaces and seamless user experiences. I have a keen eye for design and a strong understanding of modern web development practices. With a background in both software development and teaching, I enjoy collaborating with teams and continuously learning to enhance my skills. I'm currently seeking opportunities to contribute to dynamic projects and grow as a developer.
                 </p>
             </div>
         </section>

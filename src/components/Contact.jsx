@@ -1,84 +1,10 @@
-import React from 'react'
+
 import './Contact.css'
-import emailjs from 'emailjs-com'
-import { useState } from 'react'
+ 
 
 const Contact = () => {
-    const[formData,setFormData]=useState({
-        email:"",
-        fullName:"",
-        message:""
-    })
-    const handleChange = (e) => {
-      const { name, value } = e.target;
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: value // Make sure this matches the name attribute in your input
-      }));
-    };
+     
     
-  
-    const handleSubmit=()=>{
-        e.preventDefault();
-
-        // Send the form data using EmailJS
-        try{
-        emailjs
-          .send(
-            'service_398zq8r',         // Replace with your EmailJS service ID
-            'template_8lxyz71',        // Replace with your EmailJS template ID
-            formData,                  // This will be sent as the template parameters
-            '_JenGryazh8Po159n'             // Replace with your EmailJS user ID
-          )
-          .then(
-            (result) => {
-              alert('Message sent successfully!');
-              setFormData({ fullName: '', email: '', message: '' }); // Reset form
-            },
-            (error) => {
-              console.log('Error sending message:', error.text);
-            }
-          );
-        }
-        catch(error)
-        {
-          console.log(error)
-        }
-      };
-    
-  
-    
-
-{/* <div className="contact" name="contact">
-<div className=" flex items-center justify-center w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-    <form onSubmit={handleSubmit} className="space-y-6"  action="#">
-        <h5 className="text-xl font-medium text-gray-900 dark:text-white">Contact me</h5>
-        <div>
-            <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-            <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required />
-        </div>
-        <div>
-            <label htmlFor="fullname" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Full Name</label>
-            <input type="text" name="fullName" id="fullName" value={formData.fullName} onChange={handleChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="your full name" required />
-        </div>
-        <div>
-<label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message</label>
-<textarea id="message" name="message" value={formData.message}onChange={handleChange} rows="4"className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your message here..." required></textarea>
-</div> */}
-        {/* <div className="flex items-start">
-            <div className="flex items-start">
-                <div className="flex items-center h-5">
-                    <input id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
-                </div>
-                <label for="remember" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-            </div>
-            <a href="#" className="ms-auto text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
-        </div> */}
-      //  <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Send</button>
-        
-//     </form>
-// </div>
-// </div>
 return (
 
 <div className="contact">
@@ -86,7 +12,7 @@ return (
 <h2 className="text-5xl text-emerald-500 font-bold text-center">
    Contact me
 </h2>
-            <div classNameName="w-full draggable">
+            <div className="w-full draggable">
                 <div className="container flex flex-col items-center gap-16 mx-auto my-32">
                     <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                         <div className="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main">
@@ -95,9 +21,9 @@ return (
                             <path d="M31.9904 13.965L22.4166 4.40166C21.6057 3.60976 20.5294 3.16817 19.4104 3.16817C18.2914 3.16817 17.2151 3.60976 16.4041 4.40166L6.8304 13.9017C6.40502 14.283 6.0629 14.7524 5.82645 15.279C5.58999 15.8056 5.46454 16.3776 5.45831 16.9575V30.5425C5.47456 31.6946 5.93476 32.793 6.73808 33.5973C7.5414 34.4016 8.62236 34.846 9.74415 34.8333H28.9225C30.0443 34.846 31.1252 34.4016 31.9285 33.5973C32.7319 32.793 33.1921 31.6946 33.2083 30.5425V16.9575C33.2071 16.4009 33.0989 15.85 32.8899 15.3365C32.6809 14.823 32.3752 14.3569 31.9904 13.965ZM18.47 6.68166C18.7058 6.46025 19.0138 6.33747 19.3333 6.33747C19.6528 6.33747 19.9608 6.46025 20.1966 6.68166L28.5833 15.0417L20.1504 23.4017C19.9146 23.6231 19.6066 23.7459 19.2871 23.7459C18.9675 23.7459 18.6596 23.6231 18.4237 23.4017L10.0833 15.0417L18.47 6.68166ZM30.125 30.5425C30.1052 30.8533 29.9688 31.144 29.7445 31.3537C29.5203 31.5633 29.2256 31.6755 28.9225 31.6667H9.74415C9.44102 31.6755 9.14636 31.5633 8.9221 31.3537C8.69785 31.144 8.56147 30.8533 8.54165 30.5425V17.9708L14.7854 24.1458L12.2262 26.6792C11.9391 26.9758 11.7779 27.3771 11.7779 27.7954C11.7779 28.2137 11.9391 28.615 12.2262 28.9117C12.3695 29.066 12.5417 29.1891 12.7324 29.2734C12.9232 29.3578 13.1286 29.4017 13.3362 29.4025C13.7332 29.4009 14.1142 29.2421 14.4 28.9592L17.1287 26.2675C17.8065 26.6928 18.5853 26.9179 19.3796 26.9179C20.1738 26.9179 20.9527 26.6928 21.6304 26.2675L24.3591 28.9592C24.6449 29.2421 25.026 29.4009 25.4229 29.4025C25.6306 29.4017 25.8359 29.3578 26.0267 29.2734C26.2174 29.1891 26.3896 29.066 26.5329 28.9117C26.82 28.615 26.9812 28.2137 26.9812 27.7954C26.9812 27.3771 26.82 26.9758 26.5329 26.6792L23.9583 24.1458L30.125 17.9708V30.5425Z" fill="#581ff8"/>
                             </svg>
                         </span>
-                        <p classNameName="text-2xl font-extrabold text-dark-grey-900">Email</p>
+                        <p className="text-2xl font-extrabold text-dark-grey-900">Email</p>
                         <p className="text-base leading-7 text-dark-grey-600">Contact me at</p>
-                        <a className="text-lg font-bold text-purple-blue-500" href = "mailto: pp154360@gmail.com">pp154360@gmail.com</a>
+                        <a className="text-lg font-bold text-purple-blue-500" href = "mailto:pintu.pradhan0200@gmail.com">pintu.pradhan0200@gmail.com</a>
                         </div>
                         <div className="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main">
                         <span>

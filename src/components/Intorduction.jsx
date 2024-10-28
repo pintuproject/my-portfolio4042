@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const Intorduction = () => {
   return (
@@ -18,12 +18,13 @@ const Intorduction = () => {
           </div>
            
         </div>
-        <div className="flex-1">
-          <img src=
-  "myphoto.jpeg"
-               alt="Hello"
-               className="w-200px h-200px bg-cover"/>
-        </div>
+        <div className="flex justify-center">
+  <img 
+    src="myimage.jpeg"
+    alt="Hello"
+    className="mt-20 mb-20 w-80 h-80 rounded-full object-cover"
+  />
+</div>
       </section>
   )
 }

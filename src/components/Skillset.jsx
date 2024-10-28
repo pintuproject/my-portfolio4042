@@ -1,9 +1,9 @@
-import React from 'react'
+
 
 const Skillset = () => {
-    const skills = ["ReactJS","Java" ,"HTML", "CSS", "Javascript", "MySQL", "Bootstrap","Azure"];
+    const skills = ["ReactJS","Node.JS" ,"Express.JS", "MongoDB", "Next.JS","TypeScript","Javascript", "MySQL", "Bootstrap","Azure"];
   return (
-    <div className='skills'>x
+    <div className='skills'>
 <section name="skills"
             className="px-10 w-full my-40 max-w-5xl mx-auto">
             <h2 className="text-center text-6xl text-emerald-500 font-bold">
