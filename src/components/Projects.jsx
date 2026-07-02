@@ -1,74 +1,177 @@
-
-
 const Projects = () => {
   return (
-    <div className="projects">
-    <section id="projects"
-    className="my-20 w-full flex flex-col gap-5 align-center max-w-5xl mx-auto">
-<h2 className="text-5xl text-emerald-500 font-bold text-center">
-   My Projects
-</h2>
-<div className="p-10 bg-emerald-200 flex flex-col justify-center items-center
-               gap-5 lg:flex-row max-w-5xl mx-auto shadow transition 
-               hover:shadow-xl hover:scale-[102%] w-full">
-   <div className="w-80 rounded">
-       <a href=
-"https://blog-app-5621.netlify.app/"
-           className="w-full h-full">
-           <img src=
-"BlogAPP.png"
-                alt="Project 2"
-                className="w-full h-full 
-                           bg-cover rounded"/>
-       </a>
-   </div>
-   <div className="flex flex-col align-center mx-auto gap-4 justify-center flex-1">
-       <h2 className="font-bold text-3xl text-center">
-           <a className="hover:underline"
-               href=
-"https://blog-app-5621.netlify.app/ ">
-               Blog Application
-           </a>
-       </h2>
-       <p>
-       Developed a full-stack Blog Application using the MERN stack (MongoDB, Express, React, Node.js) that enables users to create, view, and manage blog posts with features such as secure user authentication via JWT, a rich text editor for flexible content creation, and location-based filtering for personalized content discovery. The application also includes interactive features like likes and comments, a checkout process for paid publishing, and a responsive design for optimal viewing across devices, with deployment on Netify for the frontend and Render for the backend.
-        </p>
-   </div>
-   
-</div>
+    <section
+      id="projects"
+      className="w-full py-16 px-6 lg:px-8"
+    >
+      <div className="max-w-7xl mx-auto">
 
-<div className="p-10 bg-emerald-200 flex flex-col justify-center items-center
-               gap-5 lg:flex-row max-w-5xl mx-auto shadow transition 
-               hover:shadow-xl hover:scale-[102%] w-full">
-   <div className="w-80 rounded">
-       <a href=
-"https://66e3056b28c05d1f1a5ab5ed--resonant-taiyaki-3f45f4.netlify.app/"
-           className="w-full h-full">
-           <img src=
-"Ecommerceapp.png"
-                alt="Project 1"
-                className="w-full h-full 
-                           bg-cover rounded"/>
-       </a>
-   </div>
-   <div className="flex flex-col align-center mx-auto gap-4 justify-center flex-1">
-       <h2 className="font-bold text-3xl text-center">
-           <a className="hover:underline"
-               href=
-"https://66e3056b28c05d1f1a5ab5ed--resonant-taiyaki-3f45f4.netlify.app/">
-               ECommerce Application
-           </a>
-       </h2>
-       <p>
-       Developed a responsive e-commerce application using React.js, providing an intuitive shopping experience with key features like product listing, detailed product views, shopping cart, and checkout functionality. Integrated state management and optimized component performance to ensure a smooth user experience across devices.
-       </p>
-   </div>
-   
-</div>
+        <div className="text-center mb-14">
+          <p className="text-[#E8A33D] uppercase tracking-[3px] text-sm">
+            Portfolio
+          </p>
 
-</section>
-</div>
-  )
-}
+          <h2 className="text-5xl font-bold text-[#F2F0E9] mt-2">
+            Featured Projects
+          </h2>
 
-export default Projects
+          <p className="text-[#8B92A3] mt-4 max-w-2xl mx-auto">
+            A selection of projects showcasing my expertise in full-stack
+            development, responsive UI design, REST APIs, authentication,
+            cloud deployment, and modern web technologies.
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-10">
+
+          {/* Project 1 */}
+
+          <div className="bg-[#1B212C] rounded-2xl overflow-hidden border border-[#2B3443] hover:border-[#E8A33D] transition-all duration-300">
+
+            <div className="grid lg:grid-cols-2">
+
+              <img
+                src="onlineclothstore.png"
+                alt="Online Cloth Store"
+                className="w-full h-full object-cover"
+              />
+
+              <div className="p-8 flex flex-col justify-center">
+
+                <span className="text-[#E8A33D] text-sm uppercase tracking-widest">
+                  Full Stack MERN Project
+                </span>
+
+                <h3 className="text-3xl font-bold text-white mt-3">
+                  Online Cloth Store
+                </h3>
+
+                <p className="text-[#8B92A3] leading-7 mt-5">
+                  Developed a complete MERN stack e-commerce platform featuring
+                  secure JWT authentication, product management, shopping cart,
+                  order management, Cloudinary image uploads, Stripe/Razorpay
+                  payment integration, MongoDB Atlas database, and a responsive
+                  user interface. The application includes separate Admin and
+                  Customer panels with full CRUD functionality and cloud
+                  deployment.
+                </p>
+
+                <div className="flex flex-wrap gap-2 mt-6">
+
+                  {[
+                    "React",
+                    "Node.js",
+                    "Express",
+                    "MongoDB",
+                    "JWT",
+                    "Cloudinary",
+                    "Stripe",
+                    "Razorpay",
+                    "Tailwind CSS"
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 rounded-full bg-[#242C39] text-[#E8A33D] text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+
+                </div>
+
+                <div className="mt-8">
+                  <a
+                    href="https://online-cloth-store-three.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center bg-[#E8A33D] text-[#161A22] font-semibold px-6 py-3 rounded-lg hover:bg-[#f1b04d] transition"
+                  >
+                    Live Demo →
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* Project 2 */}
+
+          <div className="bg-[#1B212C] rounded-2xl overflow-hidden border border-[#2B3443] hover:border-[#E8A33D] transition-all duration-300">
+
+            <div className="grid lg:grid-cols-2">
+
+              <img
+                src="BlogAPP.png"
+                alt="Blog Application"
+                className="w-full h-full object-cover"
+              />
+
+              <div className="p-8 flex flex-col justify-center">
+
+                <span className="text-[#E8A33D] text-sm uppercase tracking-widest">
+                  Full Stack MERN Project
+                </span>
+
+                <h3 className="text-3xl font-bold text-white mt-3">
+                  Blog Application
+                </h3>
+
+                <p className="text-[#8B92A3] leading-7 mt-5">
+                  Built a feature-rich blogging platform using the MERN stack
+                  with JWT authentication, rich text editing, location-based
+                  content filtering, likes, comments, secure publishing
+                  workflow, and responsive design. Designed RESTful APIs and
+                  integrated cloud deployment for scalable performance.
+                </p>
+
+                <div className="flex flex-wrap gap-2 mt-6">
+
+                  {[
+                    "React",
+                    "Node.js",
+                    "Express",
+                    "MongoDB",
+                    "JWT",
+                    "REST API",
+                    "Cloudinary",
+                    "Tailwind CSS"
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 rounded-full bg-[#242C39] text-[#E8A33D] text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+
+                </div>
+
+                <div className="mt-8">
+
+                  <a
+                    href="https://blog-app-5621.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center bg-[#E8A33D] text-[#161A22] font-semibold px-6 py-3 rounded-lg hover:bg-[#f1b04d] transition"
+                  >
+                    Live Demo →
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
